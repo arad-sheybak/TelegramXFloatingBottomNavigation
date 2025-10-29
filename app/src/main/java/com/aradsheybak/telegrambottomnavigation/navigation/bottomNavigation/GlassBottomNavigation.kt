@@ -3,10 +3,8 @@ package com.aradsheybak.telegrambottomnavigation.navigation.bottomNavigation
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.FastOutSlowInEasing
-import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
@@ -54,11 +52,10 @@ fun GlassBottomNavigation(navController: NavController){
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 24.dp, vertical = 16.dp)
+            .padding(horizontal = 34.dp, vertical = 24.dp)
             .shadow(10.dp, RoundedCornerShape(24.dp))
             .clip(RoundedCornerShape(24.dp))
-            .background(Color.White.copy(alpha = 0.1f))
-//            .blur(20.dp)
+            .background(Color.Black.copy(alpha = 1f))
     ) {
         Row(
             modifier = Modifier
