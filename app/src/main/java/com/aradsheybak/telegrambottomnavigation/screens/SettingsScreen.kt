@@ -9,8 +9,5 @@ import androidx.compose.ui.graphics.Color
 
 @Composable
 fun SettingsScreen(){
-    Box(modifier = Modifier.fillMaxSize()
-        .background(Color.White)){
 
-    }
 }
