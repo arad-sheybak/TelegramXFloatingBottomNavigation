@@ -1,8 +1,13 @@
 package com.aradsheybak.telegrambottomnavigation.screens.chats
 
 import android.util.Log
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Divider
@@ -36,10 +41,11 @@ fun ChatsScreen(
         }
         return
     }else{
-        LazyColumn(modifier = Modifier.fillMaxSize()) {
+        LazyColumn(modifier = Modifier.fillMaxSize(),
+            contentPadding = PaddingValues(horizontal = 12.dp, vertical = 12.dp)) {
             items(chats, key = {it.id}){ chat->
                 ChatRow(item = chat, onClick = onChatClick)
-                Divider(color = MaterialTheme.colorScheme.surfaceVariant, thickness = 0.5.dp)
+                Divider(color = Color.Gray, thickness = 0.2.dp, modifier = Modifier.padding(horizontal = 16.dp))
             }
         }
     }

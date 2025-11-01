@@ -19,6 +19,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.aradsheybak.telegrambottomnavigation.data.ChatItem
@@ -33,7 +34,7 @@ fun ChatRow(
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 12.dp)
+            .padding(horizontal = 8.dp, vertical = 12.dp)
             .clickable { onClick(item) }, verticalAlignment = Alignment.CenterVertically
     ) {
         //below box used for showing user/group avatar
@@ -82,21 +83,28 @@ fun ChatRow(
             }
             Spacer(Modifier.height(4.dp))
             Row(verticalAlignment = Alignment.CenterVertically) {
-                Text(text = item.lastMessage,
+                Text(
+                    text = item.lastMessage,
                     style = MaterialTheme.typography.bodyMedium,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant)
-                if (unread>0){
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+                if (unread > 0) {
                     Spacer(Modifier.width(8.dp))
-                    Box(modifier = Modifier.background(
-                        color = MaterialTheme.colorScheme.primary,
-                        shape = RoundedCornerShape(12.dp)
-                    ).padding(horizontal = 8.dp, vertical = 2.dp)
-                    ){
-                        Text(text = if (unread>99) "+99" else unread.toString(),
-                            style=MaterialTheme.typography.labelSmall,
-                            color = MaterialTheme.colorScheme.onPrimary)
+                    Box(
+                        modifier = Modifier
+                            .background(
+                                color = MaterialTheme.colorScheme.primary,
+                                shape = RoundedCornerShape(12.dp)
+                            )
+                            .padding(horizontal = 8.dp, vertical = 2.dp)
+                    ) {
+                        Text(
+                            text = if (unread > 99) "+99" else unread.toString(),
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onPrimary
+                        )
                     }
                 }
             }
