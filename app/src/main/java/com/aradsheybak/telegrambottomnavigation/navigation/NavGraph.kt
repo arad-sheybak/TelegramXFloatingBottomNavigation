@@ -5,7 +5,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.aradsheybak.telegrambottomnavigation.screens.CallsScreen
-import com.aradsheybak.telegrambottomnavigation.screens.ChatsScreen
+import com.aradsheybak.telegrambottomnavigation.screens.chats.ChatsScreen
 import com.aradsheybak.telegrambottomnavigation.screens.ContactsScreen
 import com.aradsheybak.telegrambottomnavigation.screens.SettingsScreen
 

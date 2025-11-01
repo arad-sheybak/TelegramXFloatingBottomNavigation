@@ -29,6 +29,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
@@ -69,7 +70,7 @@ fun GlassBottomNavigation(navController: NavController){
                 val interactionSource = remember { MutableInteractionSource() }
 
                 val iconTint by animateColorAsState(
-                    if (selected) Color.Magenta else Color.White.copy(alpha = 1f)
+                    if (selected) colorResource(R.color.stroke_bttm_icns) else Color.White.copy(alpha = 1f)
                 )
                 val scope = rememberCoroutineScope()
                 val scale = remember { Animatable(1f) }

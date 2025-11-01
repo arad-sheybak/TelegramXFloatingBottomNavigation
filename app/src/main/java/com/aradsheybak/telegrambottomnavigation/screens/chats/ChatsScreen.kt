@@ -1,4 +1,4 @@
-package com.aradsheybak.telegrambottomnavigation.screens
+package com.aradsheybak.telegrambottomnavigation.screens.chats
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -9,6 +9,7 @@ import androidx.compose.ui.graphics.Color
 
 @Composable
 fun ChatsScreen(){
+
     Box(modifier = Modifier.fillMaxSize()
         .background(Color.White)){
 
